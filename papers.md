@@ -1,3 +1,54 @@
+# _Title:_ [Transformers Learn Temporal Difference Methods for In-Context Reinforcement Learning](https://arxiv.org/abs/2405.13861) (ICLR 2025 668)
+
+_Author:_ Jiuqi Wang, Ethan Blaser, Hadi Daneshmand, Shangtong Zhang (University of Virginia, MIT LIDS/Boston University)
+
+## Abstract
+
+In-context learning refers to the learning ability of a model during inference time
+without adapting its parameters. The input (i.e., prompt) to the model (e.g., transformers) consists of both a context (i.e., instance-label pairs) and a query instance.
+The model is then able to output a label for the query instance according to the
+context during inference. A possible explanation for in-context learning is that
+the forward pass of (linear) transformers implements iterations of gradient descent
+on the instance-label pairs in the context. In this paper, we prove by construction that transformers can also implement temporal difference (TD) learning in
+the forward pass, a phenomenon we refer to as in-context TD. We demonstrate
+the emergence of in-context TD after training the transformer with a multi-task
+TD algorithm, accompanied by theoretical analysis. Furthermore, we prove that
+transformers are expressive enough to implement many other policy evaluation
+algorithms in the forward pass, including residual gradient, TD with eligibility
+trace, and average-reward TD.
+
+
+## Theory
+
+The following theorem shows that a Transformer can learn TD in-context:
+
+<p align="center">
+      <img src="img/zhijie wang/4-1.png" width="800" />
+</p>
+
+Experimental results to show that Transformers do learn TD in-context:
+
+<p align="center">
+      <img src="img/zhijie wang/4-2.png" width="800" />
+</p>
+
+Also, Transformers can implement other RL algorithms:
+
+<p align="center">
+      <img src="img/zhijie wang/4-3.png" width="800" />
+</p>
+
+<p align="center">
+      <img src="img/zhijie wang/4-3.png" width="800" />
+</p>
+
+<p align="center">
+      <img src="img/zhijie wang/4-3.png" width="800" />
+</p>
+
+<br>By <i>Zhijie Wang</i><br>
+
+---
 
 # _Title:_ [Transformers as Decision Makers: Provable In-Context Reinforcement Learning via Supervised Pretraining](https://arxiv.org/abs/2310.08566) (ICLR 2024)
 
@@ -18,9 +69,23 @@ pretrained from offline trajectories.
 
 ## Theory
 
+The following theorem provides the cumulative reward bound:
+
 <p align="center">
       <img src="img/zhijie wang/3-1.png" width="800" />
 </p>
+
+Transformers can also approximate the soft LinUCB in linear bandits:
+
+<p align="center">
+      <img src="img/zhijie wang/3-2.png" width="800" />
+</p>
+
+<p align="center">
+      <img src="img/zhijie wang/3-3.png" width="800" />
+</p>
+
+Similarly, the paper also showed the bound for UCB-VI in linear bandits.
 
 <br>By <i>Zhijie Wang</i><br>
 
