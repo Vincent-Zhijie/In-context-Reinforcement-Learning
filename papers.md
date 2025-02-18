@@ -39,11 +39,11 @@ Also, Transformers can implement other RL algorithms:
 </p>
 
 <p align="center">
-      <img src="img/zhijie wang/4-3.png" width="800" />
+      <img src="img/zhijie wang/4-4.png" width="800" />
 </p>
 
 <p align="center">
-      <img src="img/zhijie wang/4-3.png" width="800" />
+      <img src="img/zhijie wang/4-5.png" width="800" />
 </p>
 
 <br>By <i>Zhijie Wang</i><br>
